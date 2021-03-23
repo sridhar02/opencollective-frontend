@@ -264,9 +264,9 @@ const Hero = ({ collective, host, isAdmin, onPrimaryColorChange }) => {
                   )}
                 </Fragment>
               )}
-              {collective.canApply && (
+              {collective.isHost && (
                 <Fragment>
-                  {collective.settings.tos && (
+                  {collective.settings?.tos && (
                     <StyledLink
                       target="_blank"
                       rel="noopener noreferrer"
@@ -333,7 +333,6 @@ Hero.propTypes = {
     slug: PropTypes.string.isRequired,
     company: PropTypes.string,
     isApproved: PropTypes.bool,
-    canApply: PropTypes.bool,
     backgroundImage: PropTypes.string,
     backgroundImageUrl: PropTypes.string,
     twitterHandle: PropTypes.string,
